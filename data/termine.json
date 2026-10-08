@@ -1,1 +1,67 @@
-[]
+[
+ {
+  "datum": "2026-07-06",
+  "titel": "Weinfest Senheim",
+  "zeit": "19:30–00:30 Uhr"
+ },
+ {
+  "datum": "2026-07-11",
+  "titel": "Dorffest Bodenbach",
+  "zeit": "20:30–23:30 Uhr"
+ },
+ {
+  "datum": "2026-07-18",
+  "titel": "Salm",
+  "zeit": "20:30 Uhr, 3 Std."
+ },
+ {
+  "datum": "2026-07-20",
+  "titel": "Vallendar",
+  "zeit": "14:00–18:00 Uhr"
+ },
+ {
+  "datum": "2026-08-08",
+  "titel": "Bezirksschützenfest Dünfus",
+  "zeit": "19:30–23:30 Uhr (evtl. länger)"
+ },
+ {
+  "datum": "2026-08-20",
+  "titel": "Gillenfeld, Ortsmitte",
+  "zeit": "19:00–22:00 Uhr"
+ },
+ {
+  "datum": "2025-05-31",
+  "titel": "Schützenfest Zermüllen",
+  "zeit": "abends"
+ },
+ {
+  "datum": "2025-07-07",
+  "titel": "Weinfest Senheim",
+  "zeit": "19:30–00:30 Uhr"
+ },
+ {
+  "datum": "2025-07-12",
+  "titel": "Dorffest Bodenbach",
+  "zeit": "20:30–23:30 Uhr"
+ },
+ {
+  "datum": "2025-07-20",
+  "titel": "Vallendar",
+  "zeit": "nachmittags"
+ },
+ {
+  "datum": "2025-08-02",
+  "titel": "FW Fest Müllenbach (Nürburgring)",
+  "zeit": "19:00–22:00 Uhr"
+ },
+ {
+  "datum": "2025-08-23",
+  "titel": "Schützenfest Dünfus",
+  "zeit": "20:30–23:30 Uhr"
+ },
+ {
+  "datum": "2025-10-25",
+  "titel": "Oktoberfest Kelberg",
+  "zeit": "ab 19:00 Uhr"
+ }
+]
