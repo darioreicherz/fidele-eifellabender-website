@@ -1,3 +1,5 @@
+/* Logo: fehlt die Datei (noch nicht abgelegt), wird das Bild ausgeblendet statt ein Fehlersymbol zu zeigen */
+document.querySelectorAll("img.logo").forEach(i=>{const p=new Image();p.onerror=()=>{i.hidden=true;};p.src=i.getAttribute("src");});
 (async()=>{
 const up=document.querySelector("[data-upcoming]"),past=document.querySelector("[data-past]"),nxt=document.querySelector("[data-next-events]");
 if(!up&&!nxt)return;
