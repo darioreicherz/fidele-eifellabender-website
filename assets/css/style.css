@@ -45,21 +45,22 @@ figure{margin:0}figcaption,.small{font-size:.875rem;color:var(--muted)}
 .band{padding:2rem 0 1rem}
 .ss{overflow:hidden;height:clamp(11rem,26vw,22rem)}
 .ss-track{display:flex;height:100%;margin:0;padding:0;list-style:none;transition:transform .5s cubic-bezier(.2,.8,.2,1)}
-.ss-slide{flex:0 0 56%;padding:0 .5rem;transition:filter .5s,opacity .5s,transform .5s;filter:blur(6px);opacity:.55;transform:scale(.9)}
-.ss-slide.is-current{filter:none;opacity:1;transform:none}
-@media (max-width:40rem){.ss-slide{flex-basis:78%}}
+.ss-slide{flex:0 0 46%;padding:0 .5rem;position:relative;z-index:1;transition:filter .5s,opacity .5s,transform .5s,flex-basis .5s;filter:blur(6px);opacity:.55;transform:scale(.9)}
+.ss-slide.is-current{flex-basis:62%;z-index:2;filter:none;opacity:1;transform:scale(1.02)}
+@media (max-width:40rem){.ss-slide{flex-basis:72%}.ss-slide.is-current{flex-basis:86%}}
 .ss-slide button,.thumb{display:block;width:100%;height:100%;padding:0;border:0;background:none;cursor:pointer;color:inherit;text-align:left}
-.ss-slide img{width:100%;height:100%;object-fit:cover;display:block}
+.ss-slide img{width:100%;height:100%;object-fit:contain;display:block;background:transparent}
 .ss-ctl{display:flex;gap:.75rem;justify-content:center;flex-wrap:wrap;margin:1rem 0 .25rem}
 .ss-status{text-align:center;margin:0 auto}
 @media (prefers-reduced-motion:reduce){.ss-track,.ss-slide{transition:none}}
 /* Galerie nach Jahren */
 .gal{max-width:70rem;margin:0 auto;padding:0 1.25rem}
 .yr-head{display:flex;justify-content:space-between;align-items:center;gap:1rem}
-.yr-row{list-style:none;margin:0;padding:.25rem .25rem 1rem;display:flex;gap:1rem;overflow-x:auto;scroll-snap-type:x proximity}
-.yr-row li{flex:0 0 min(18rem,80%);scroll-snap-align:start}
-.thumb img{width:100%;aspect-ratio:3/2;object-fit:cover;display:block}
+.yr-row{list-style:none;margin:0;padding:.25rem .25rem 1rem;display:flex;gap:1rem;overflow-x:auto;scroll-snap-type:x proximity;align-items:flex-start}
+.yr-row li{flex:0 0 auto;scroll-snap-align:start}
+.thumb{display:block;width:auto;height:auto;padding:0;border:0;background:none;cursor:pointer;color:inherit;text-align:left}
+.thumb img{display:block;height:clamp(12rem,18vw,18rem);width:auto;max-width:100%;object-fit:contain;background:transparent}
 .lb{border:0;border-radius:.75rem;padding:1rem;max-width:min(60rem,94vw);background:var(--bg);color:var(--ink)}
 .lb::backdrop{background:rgba(0,0,0,.8)}
-.lb img{max-width:100%;max-height:70vh;display:block;margin:0 auto}
+.lb img{max-width:100%;max-height:70vh;display:block;margin:0 auto;object-fit:contain;background:transparent}
 .lb figcaption{margin-top:.5rem}

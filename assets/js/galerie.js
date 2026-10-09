@@ -21,8 +21,8 @@ if(show){
     show.innerHTML=`<div class="ss" role="group" aria-roledescription="Diashow" aria-label="Fotos der Band" tabindex="0"><ul class="ss-track">${ph.map((f,i)=>`<li class="ss-slide"><button type="button" tabindex="-1" data-i="${i}" aria-label="Bild ${i+1} von ${ph.length}: ${esc(alt(f))}"><img src="${esc(f.datei)}" alt="" width="1200" height="400"></button></li>`).join("")}</ul></div>
 <div class="ss-ctl"><button type="button" class="btn-sec" data-act="prev">Zurück</button><button type="button" class="btn-sec" data-act="play" aria-pressed="false">Pause</button><button type="button" class="btn-sec" data-act="next">Weiter</button></div><p class="small ss-status" aria-live="off"></p>`;
     const box=show.querySelector(".ss"),track=show.querySelector(".ss-track"),slides=[...track.children],st=show.querySelector(".ss-status"),pb=show.querySelector("[data-act=play]");
-    let cur=0,timer=null,hold=false,playing=false;
-    const layout=()=>{track.style.transform=`translateX(${box.clientWidth/2-(cur+.5)*slides[0].offsetWidth}px)`;
+    let cur=ph.length>1?1:0,timer=null,hold=false,playing=false;
+    const layout=()=>{if(!slides.length)return;const active=slides[cur]||slides[0];const before=slides.slice(0,cur).reduce((sum,s)=>sum+s.offsetWidth,0);track.style.transform=`translateX(${box.clientWidth/2-(before+active.offsetWidth/2)}px)`;
       slides.forEach((s,i)=>{s.classList.toggle("is-current",i===cur);s.querySelector("button").toggleAttribute("aria-current",i===cur);});
       st.textContent=`Bild ${cur+1} von ${ph.length}`;};
     const go=n=>{cur=(n+ph.length)%ph.length;layout();};
