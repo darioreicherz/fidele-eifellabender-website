@@ -64,7 +64,7 @@ if(show){
     const settle=()=>requestAnimationFrame(()=>requestAnimationFrame(()=>els.forEach(el=>el.classList.remove("jump"))));
     const go=d=>{if(M<2)return;cur=((cur+d)%M+M)%M;layout();};
     const play=on=>{playing=on;clearInterval(timer);
-      if(on)timer=setInterval(()=>{if(!hovered&&!focused&&!document.hidden)go(1);},5000);
+      if(on)timer=setInterval(()=>{if(!hovered&&!focused&&!document.hidden)go(1);},3500);
       if(pb){pb.innerHTML=on?ICON_PAUSE:ICON_PLAY;pb.setAttribute("aria-label",on?"Diashow anhalten":"Diashow abspielen");}
       st.setAttribute("aria-live",on?"off":"polite");};
     els.forEach(el=>el.classList.add("jump"));layout();settle();

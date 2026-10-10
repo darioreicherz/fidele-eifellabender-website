@@ -7,7 +7,8 @@
 (()=>{
 const reduce=matchMedia("(prefers-reduced-motion:reduce)").matches;
 const wide=document.body.classList.contains("wide");
-const mq=matchMedia(wide?"(min-width:88rem)":"(min-width:62rem)");
+const mid=document.body.classList.contains("mid");
+const mq=matchMedia(wide?"(min-width:88rem)":mid?"(min-width:74rem)":"(min-width:62rem)");
 
 /* ---------- Zeichenhilfen ---------- */
 const S=(vb,inner)=>`<svg viewBox="${vb}" aria-hidden="true" focusable="false">${inner}</svg>`;
